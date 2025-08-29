@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Doctors | Mount Pleasant Premier Hospital</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-green: #198754;
+            --dark-green: #146c43;
+            --black-bg: #121212;
+            --light-text: #f8f9fa;
+        }
+
+        body {
+            background-color: var(--black-bg);
+            color: var(--light-text);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        /* Re-pasting all custom styles for consistency */
+        .bg-gradient-green { background: linear-gradient(135deg, var(--primary-green), var(--dark-green)); }
+        .text-gradient-green { background: linear-gradient(45deg, #2bffc6, var(--primary-green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; text-fill-color: transparent; }
+        .navbar { background-color: rgba(18, 18, 18, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+        .navbar-brand .fa-hospital { color: var(--primary-green); }
+        .nav-link { color: var(--light-text) !important; font-weight: 500; }
+        .nav-link:hover, .nav-link.active { color: var(--primary-green) !important; }
+        .btn-gradient { background-image: linear-gradient(to right, var(--primary-green) 0%, #2dbd7a 51%, var(--primary-green) 100%); border: none; color: white; padding: 12px 30px; text-align: center; text-transform: uppercase; transition: 0.5s; background-size: 200% auto; box-shadow: 0 0 20px rgba(0,0,0,0.1); border-radius: 30px; text-decoration: none; }
+        .btn-gradient:hover { background-position: right center; color: #fff; }
+        .section-padding { padding: 80px 0; }
+        .section-title { font-weight: 700; margin-bottom: 50px; }
+        .footer { background-color: #0a0a0a; padding: 50px 0; text-align: center; }
+        .footer .social-icon { color: var(--light-text); font-size: 1.5rem; transition: color 0.3s ease, transform 0.3s ease; }
+        .footer .social-icon:hover { color: var(--primary-green); transform: scale(1.2); }
+
+        /* --- Page-specific Styles for Doctors --- */
+        .page-header {
+            padding: 100px 0;
+            background: linear-gradient(rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0.7)), url('https://images.unsplash.com/photo-1551198802-90205604c343?q=80&w=2070&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+        }
+
+        .doctor-profile-card {
+            background-color: #1e1e1e;
+            border: 1px solid #2e2e2e;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .doctor-profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 132, 0.1);
+        }
+        
+        .doctor-profile-card .doctor-img {
+            max-height: 300px;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .doctor-profile-card .card-body {
+            padding: 25px;
+        }
+        
+        .doctor-profile-card .qualifications {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+<a href="http://wa.me/263771234567?text=I'm%20interested%20in%20booking%20an%20appointment" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+</a>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fs-4 fw-bold" href="index.html">
+                <i class="fas fa-hospital me-2"></i>Mount Pleasant <span style="color: var(--primary-green);">Premier</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="aboutourDoctors.html">Our Doctors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-gradient ms-lg-3">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container" data-aos="fade-in">
+            <h1 class="display-4 fw-bold text-white">Meet Our Expert Medical Team</h1>
+            <p class="lead text-light">Dedicated professionals committed to your health and well-being.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-padding">
+            <div class="container">
+                <div class="mb-5" data-aos="fade-up">
+                    <h2 class="section-title border-bottom pb-3 mb-4">Department of <span class="text-gradient-green">Cardiology</span></h2>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="doctor-profile-card">
+                                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16e?q=80&w=2070&auto=format&fit=crop" class="doctor-img" alt="Dr. Chipo Moyo">
+                                <div class="card-body">
+                                    <h4 class="card-title">Dr. Chipo Moyo</h4>
+                                    <p class="text-gradient-green fw-bold">Chief Cardiologist</p>
+                                    <p class="card-text small">Dr. Moyo is a leading expert in interventional cardiology with over 15 years of experience. Her patient-first philosophy ensures the highest level of care.</p>
+                                    <p class="qualifications"><i class="fas fa-user-graduate me-2"></i>MBChB (UZ), MMed (UCT)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="section-title border-bottom pb-3 mb-4">Department of <span class="text-gradient-green">Neurology</span></h2>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="doctor-profile-card">
+                                <img src="https://images.unsplash.com/photo-1622253692010-33352da55e0d?q=80&w=2070&auto=format&fit=crop" class="doctor-img" alt="Dr. Tafadzwa Bell">
+                                <div class="card-body">
+                                    <h4 class="card-title">Dr. Tafadzwa Bell</h4>
+                                    <p class="text-gradient-green fw-bold">Head of Neurology</p>
+                                    <p class="card-text small">Specializing in complex neurological disorders, Dr. Bell is renowned for his diagnostic accuracy and innovative treatment approaches.</p>
+                                     <p class="qualifications"><i class="fas fa-user-graduate me-2"></i>MBBS, FRCP (UK)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="section-title border-bottom pb-3 mb-4">Department of <span class="text-gradient-green">Paediatrics</span></h2>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="doctor-profile-card">
+                                <img src="https://plus.unsplash.com/premium_photo-1661764878654-3d085188f2f7?q=80&w=1887&auto=format&fit=crop" class="doctor-img" alt="Dr. Thandiwe Ncube">
+                                <div class="card-body">
+                                    <h4 class="card-title">Dr. Thandiwe Ncube</h4>
+                                    <p class="text-gradient-green fw-bold">Lead Paediatrician</p>
+                                    <p class="card-text small">With a passion for child wellness, Dr. Ncube provides compassionate and comprehensive care for infants, children, and adolescents.</p>
+                                     <p class="qualifications"><i class="fas fa-user-graduate me-2"></i>MBChB, DCH</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="doctor-profile-card">
+                                <img src="https://images.unsplash.com/photo-1618498082410-b4aa22193b38?q=80&w=2070&auto=format&fit=crop" class="doctor-img" alt="Dr. Simba Makoni">
+                                <div class="card-body">
+                                    <h4 class="card-title">Dr. Simba Makoni</h4>
+                                    <p class="text-gradient-green fw-bold">Paediatric Surgeon</p>
+                                    <p class="card-text small">Dr. Makoni is a highly skilled surgeon specializing in neonatal and paediatric procedures, known for his meticulous and gentle approach.</p>
+                                     <p class="qualifications"><i class="fas fa-user-graduate me-2"></i>MBChB, FCS (SA) Paed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                 <div data-aos="fade-up" data-aos-delay="100">
+                    <h2 class="section-title border-bottom pb-3 mb-4">Department of <span class="text-gradient-green">Radiology</span></h2>
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="doctor-profile-card">
+                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2070&auto=format&fit=crop" class="doctor-img" alt="Dr. Farai Tambo">
+                                <div class="card-body">
+                                    <h4 class="card-title">Dr. Farai Tambo</h4>
+                                    <p class="text-gradient-green fw-bold">Chief Radiologist</p>
+                                    <p class="card-text small">Dr. Tambo leads our advanced imaging department, ensuring that every diagnosis is supported by the highest quality radiological evidence.</p>
+                                    <p class="qualifications"><i class="fas fa-user-graduate me-2"></i>MBChB, FC Rad (Diag)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer section-padding pb-4" style="background-color: #0a0a0a;">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="fw-bold mb-3"><i class="fas fa-hospital me-2 text-gradient-green"></i>MPP Hospital</h5>
+                    <p class="small opacity-75">Providing compassionate care with advanced medicine to the Harare community. Your health is our priority.</p>
+                    <div class="mt-4">
+                        <a href="#" class="social-icon mx-2 fs-4"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon mx-2 fs-4"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon mx-2 fs-4"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon mx-2 fs-4"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-white-50 text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="doctors.html" class="text-white-50 text-decoration-none">Our Doctors</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-6 col-md-12">
+                     <h5 class="fw-bold mb-3">Contact Us</h5>
+                     <div class="d-flex align-items-start mb-3">
+                        <i class="fas fa-map-marker-alt text-gradient-green mt-1 me-3"></i>
+                        <p class="text-white-50">123 Health Avenue, Mount Pleasant, Harare, Zimbabwe</p>
+                    </div>
+                     <div class="d-flex align-items-start mb-3">
+                        <i class="fas fa-envelope text-gradient-green mt-1 me-3"></i>
+                        <a href="mailto:info@mppremier.co.zw" class="text-white-50 text-decoration-none">info@mppremier.co.zw</a>
+                    </div>
+                     <div class="d-flex align-items-start">
+                        <i class="fas fa-phone text-gradient-green mt-1 me-3"></i>
+                        <a href="tel:+263242123456" class="text-white-50 text-decoration-none">+263 242 123 456</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                 <p class="mb-0 small text-white-50">© 2025 Mount Pleasant Premier Hospital. All Rights Reserved.</p>
+                 <p class="mb-0 small text-white-50">Designed with <i class="fas fa-heart text-danger"></i>Btech</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+</html>
